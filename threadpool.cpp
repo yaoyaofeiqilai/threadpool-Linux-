@@ -218,6 +218,7 @@ Result::Result(std::shared_ptr<Task> task , bool isValid )
 	:task_(task)
 	,isValid_(isValid)
 {
+	semPtr_= std::make_unique<Semaphore>(0);  //初始化信号量为0
 	task_->setVal(this);
 };
 
@@ -225,6 +226,10 @@ Result::Result(std::shared_ptr<Task> task , bool isValid )
 void Result::setVal(Any any)
 {
 	any_ = std::move(any);  //赋值，信号量增加
+	if(semPtr_==nullptr)
+	{
+		std::cout<<"semptr为空"<<std::endl;
+	}
 	semPtr_->post();
 }
 

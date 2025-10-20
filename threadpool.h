@@ -120,7 +120,9 @@ public:
 	{
 		std::unique_lock<std::mutex> lock(mtx_);
 		cnt_++;
+		std::cout<<"信号量增加，当前值为："<<cnt_<<std::endl;
 		cv_.notify_all();
+		std::cout<<"通知完成"<<std::endl;
 	}
 private:
 	int cnt_;
