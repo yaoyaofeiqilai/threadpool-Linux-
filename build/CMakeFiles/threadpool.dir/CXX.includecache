@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/yaoyao/code/thredpool(linux)/threadpool-Linux-/test.cpp
+iostream
+-
+chrono
+-
+thread
+-
+threadpool.h
+/home/yaoyao/code/thredpool(linux)/threadpool-Linux-/threadpool.h
+
+/home/yaoyao/code/thredpool(linux)/threadpool-Linux-/threadpool.cpp
+threadpool.h
+/home/yaoyao/code/thredpool(linux)/threadpool-Linux-/threadpool.h
+
+/home/yaoyao/code/thredpool(linux)/threadpool-Linux-/threadpool.h
+vector
+-
+queue
+-
+memory
+-
+atomic
+-
+mutex
+-
+condition_variable
+-
+functional
+-
+thread
+-
+iostream
+-
+unordered_map
+-
+
